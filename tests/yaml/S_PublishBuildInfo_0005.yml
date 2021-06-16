@@ -37,4 +37,4 @@ pipelines:
         execution:
           onExecute:
             - jfrog rt download --fail-no-op --insecure-tls=${no_verify_ssl} --limit=1 --flat "artifactory-build-info/${buildName}/${buildNumber}-*.json" "buildInfo.json"
-            - jfrog rt curl -XDELETE /api/build/${buildName}?buildNumbers=${buildNumber}&artifacts=1
+#           - jfrog rt curl -XDELETE /api/build/${buildName}?buildNumbers=${buildNumber}&artifacts=1
